@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root{
+    --buttonColor:#1f1f1fcc;
+    --buttonColor_h: #3f3f3fcc;
+    --buttonColor_o: #0008;
+    --padsBg: #010101cc;
+    --middleColor: #141414cc;
+    --bspColor_h: #ddd;
+    --fontColor: #fff;
+    --fontColor_l: #ccc;
+}
+
+main {
+    height: 100vh;
+    background-image: url(../source/background-d.jpg);
+    background-size: cover;
+    background-position: center center;
+    display: grid;
+    place-items: center;
+}
+
+.main {
+    width: 400px;
+    height: 550px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(120, 120, 120, 0.7);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+}
+
+.theme {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(30, 30, 30, 0.7);
+    border-radius: 10px 10px 0 0;
+}
+
+#ill-mode {
+    margin: 5px;
+    color: #ccc;
+    font-size: 25px;
+    transition: color 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+#ill-mode:hover {
+    color: #fff;
+}
+
+#output {
+    text-align: right;
+    height: 45px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: var(--middleColor);
+    font-size: 35px;
+    transition: color 0.05s ease-in-out;
+}
+
+.middle {
+    display: flex;
+    height: 35px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--middleColor);
+    border-top: 1px solid #3339;
+    padding: 0 15px;
+}
+
+#last-output {
+    color: var(--fontColor_l);
+}
+
+#backspace {
+    font-size: 35px;
+    color: var(--fontColor);
+}
+
+#backspace:hover {
+    color: var(--bspColor_h);
+}
+
+.typing {
+    color: var(--fontColor);
+}
+
+.error {
+    color: #f03c3c;
+}
+
+.pads {
+    padding: 15px 0;
+    width: 100%;
+    height: 78.5%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    background: var(--padsBg);
+}
+
+.button {
+    width: 72px;
+    height: 72px;
+    box-sizing: border-box;
+    border: 1px solid var(--buttonColor_o);
+    font-size: 25px;
+    outline: none;
+    color: var(--fontColor);
+    border-radius: 100%;
+    background-color: var(--buttonColor);
+}
+
+.button:hover {
+    background-color: var(--buttonColor_h);
+}
