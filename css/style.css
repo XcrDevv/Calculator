@@ -26,6 +26,8 @@ main {
 }
 
 .main {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 10fr;
     width: 400px;
     height: 550px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -39,7 +41,7 @@ main {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 40px;
+    height: 100%;
     background-color: rgba(30, 30, 30, 0.7);
     border-radius: 10px 10px 0 0;
 }
@@ -58,7 +60,6 @@ main {
 
 #output {
     text-align: right;
-    height: 45px;
     width: 100%;
     border: none;
     outline: none;
@@ -69,7 +70,7 @@ main {
 
 .middle {
     display: flex;
-    height: 35px;
+    height: 100%;
     justify-content: space-between;
     align-items: center;
     background-color: var(--middleColor);
@@ -84,6 +85,7 @@ main {
 #backspace {
     font-size: 35px;
     color: var(--fontColor);
+    cursor: pointer;
 }
 
 #backspace:hover {
@@ -101,7 +103,7 @@ main {
 .pads {
     padding: 15px 0;
     width: 100%;
-    height: 78.5%;
+    height: 100%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -120,8 +122,25 @@ main {
     color: var(--fontColor);
     border-radius: 100%;
     background-color: var(--buttonColor);
+    cursor: pointer;
 }
 
 .button:hover {
     background-color: var(--buttonColor_h);
+}
+
+
+@media screen and (max-width:520px) {    
+    .main {
+        grid-template-rows: 1fr 3fr 2fr 10fr;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:300px) {    
+    .button {
+        width: calc(100vw/4 - 5px);
+        height: calc(100vw/4 - 5px);
+    }
 }
